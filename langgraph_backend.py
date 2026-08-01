@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph import add_messages
 
-load_dotenv()\
+load_dotenv()
 
 llm = ChatGroq(model="openai/gpt-oss-20b")
 
