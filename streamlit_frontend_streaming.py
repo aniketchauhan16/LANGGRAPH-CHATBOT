@@ -14,12 +14,12 @@ for message in st.session_state['message_history']:
 user_input = st.chat_input("Type here...")
 
 if user_input:
-
+    
     st.session_state['message_history'].append({'role' : 'user' , 'content' : user_input})
     with st.chat_message('user'):
         st.text(user_input)
 
-    
+
     with st.chat_message('assistant'):
         ai_message =  st.write_stream(
             message_chunk.content for message_chunk, metadata in chatbot.stream(
